@@ -1,4 +1,4 @@
-project(lviewer)
+project(creazy)
 
 cmake_minimum_required(VERSION 2.6)
 
@@ -8,9 +8,8 @@ include_directories(include)
 
 add_executable(${PROJECT_NAME} ${SRCS})
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g")
 
 find_package(OpenCV REQUIRED)
 
 target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})
-
